@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+     font-family: "Open Sans", sans-serif;
+     font-optical-sizing: auto;
+     font-style: normal;
+     font-variation-settings:
+          "wdth" 100;
+     margin: 0;
+     padding: 0;
+}
+
+
+/* IO */
+form {
+     margin-top: 1em;
+}
+
+input {
+     font-family: "Space Mono", monospace;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 1em;
+     border: none;
+     border-bottom: 1px solid #1890ff;
+     padding: 5px 7px;
+     border-color: #000;
+     padding-left: 0.5em;
+     margin-left: 1em;
+     width: 10em;
+     transition: border-color 0.7s;
+}
+
+input:focus {
+     outline: none;
+     border-color: #ff613d;
+     transition: border-color 0.5s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+}
+
+input[type=number] {
+     -moz-appearance: textfield;
+}
+
+span {
+     font-family: "Space Mono", monospace;
+     font-weight: 400;
+     font-style: italic;
+}
+
+table {
+     border-collapse: collapse;
+     width: 100%;
+}
+
+th,
+td {
+     padding: 0.5em;
+     padding-bottom: 1em;
+}
+
+th {
+     font-weight: 600;
+}
+
+#inventory_table tbody td {
+     font-family: "Space Mono", monospace;
+     font-weight: 400;
+     font-style: italic;
+}
+
+#inventory_table tbody tr:nth-child(odd) {
+     background-color: #f0f0f0;
+}
+
+#inventory_table thead tr {
+     border-bottom: 1px solid #ddd;
+}
+
+#inventory_table tbody td:nth-child(-n+5) {
+     text-align: right;
+}
+
+#inventory_table tbody td:nth-child(1) {
+     text-align: left;
+     padding-left: 2em;
+}
+
+#inventory_table tbody td:nth-last-child(1) {
+     text-align: center;
+}
+
+#inventory_summary td {
+     text-align: center;
+}
+
+#inventory_summary tbody td {
+     padding-top: 0;
+}
+
+#inventory_summary th {
+     padding-bottom: 0.1em;
+}
+
+
+/* TEXT */
+h1,
+h2,
+h3 {
+     margin: 1em 0.5em 0em 0.5em;
+}
+
+p {
+     margin: 0em 0em 0em 2em;
+}
+
+/* BUTTONS */
+ion-icon {
+     padding-top: 0.25em;
+     padding-bottom: 0;
+     transition: color 1s;
+     font-size: 2em;
+}
+
+button {
+     border: none;
+     padding: 0;
+     margin: 0;
+     padding-left: 0.5em;
+
+     transition: opacity 1s;
+     opacity: 0.3;
+     background: none;
+}
+
+button:hover {
+     transition: opacity 0.3s;
+     opacity: 1;
+}
+
+.solid-btn {
+     opacity: 1;
+}
+
+.add:hover,
+.restock:hover {
+     transition: opacity 0.3s;
+     color: greenyellow;
+}
+
+.delete:hover,
+.spoilage:hover {
+     transition: opacity 0.3s;
+     color: red;
+}
+
+
+/* KEYFRAMES */
+@media (min-width: 1200px) {
+     body {
+          max-width: 60%;
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+          flex-direction: column;
+     }
+}

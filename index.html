@@ -1,0 +1,93 @@
+<!DOCTYPE html onload='loadInventoryFromDB();'>
+
+<head>
+     <!--meta tags-->
+     <meta charset="UTF-8">
+     <meta name="description"
+          content="A javascript program that exhibits the functionality of a simple inventory system.">
+     <meta name="keywords" content="javascript,inventory,diproglang,indexeddb">
+     <meta name="author" content="javascript group 6diproglang">
+     <meta name="revised" content="javascript group 6diproglang, 12/04/2023">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Stack Overflow</title> <!--title-->
+     <!--favicon-->
+     <link rel="shortcut icon" href="./assets/JavaScript-logo.ico" type="image/x-icon">
+     <!--css-->
+     <link rel="stylesheet" href="./style.css">
+     <!--icons-->
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+     <!--input-->
+     <h1>Stack Overflow</h1>
+     <p>an overflowing inventory built with JS.</p>
+     <form id="itemform">
+          <input type="text" id="item_name" name="item_name" placeholder="Item name" maxlength="32" required>
+          <input type="number" id="item_quantity" name="item_quantity" placeholder="Quantity" required>
+          <input type="number" id="item_price" name="item_price" placeholder="Price" required>
+          <input onfocus="(this.type='date')" onblur="(this.type='text')" id="item_expiration" name="item_expiration"
+               placeholder="Expiration">
+          <button type="submit" class="solid-btn add"><ion-icon name="enter"></ion-icon></button>
+     </form>
+
+     <!--summary-->
+     <h2>Summary</h2>
+     <table id="inventory_summary">
+          <thead>
+               <tr>
+                    <th>Unique Items</th>
+                    <th>Total Inventory</th>
+                    <th>Inventory Value</th>
+                    <th>Spoiled</th>
+                    <th>Remove Spoiled</th>
+                    <th>Last Restock Value</th>
+                    <th>Restock All</th>
+               </tr>
+          </thead>
+          <tbody>
+               <tr>
+                    <td><span id="unique_items">0</span></td>
+                    <td><span id="total_inventory">0</span></td>
+                    <td><span id="total_value">₱0.00</span></td>
+                    <td><span id="spoilage">0</span></td>
+                    <td><button id="spoilage_button" class="solid-btn spoilage"><ion-icon
+                                   name="warning"></ion-icon></button></td>
+                    <td><span id="restock">0</span></td>
+                    <td><button id="restock_button" class="solid-btn restock"><ion-icon
+                                   name="bag-add"></ion-icon></button></td>
+               </tr>
+          </tbody>
+     </table>
+
+     <!--inventory-->
+     <h3>Inventory</h3>
+     <table id="inventory_table">
+          <thead>
+               <tr>
+                    <th>ID</th>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Expiration</th>
+                    <th>Action</th>
+               </tr>
+          </thead>
+          <tbody>
+          </tbody>
+     </table>
+
+     <!--inventory.js-->
+     <script src="script.js"></script>
+
+     <script>
+
+     </script>
+
+</body>
+
+</html>
