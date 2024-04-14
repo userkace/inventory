@@ -31,7 +31,8 @@
           <input type="number" id="item_price" name="item_price" placeholder="Price" required>
           <input onfocus="(this.type='date')" onblur="(this.type='text')" id="item_expiration" name="item_expiration"
                placeholder="Expiration">
-          <button type="submit" class="solid-btn add"><ion-icon name="enter"></ion-icon></button>
+          <button title="Add Item to stock" type="submit" class="solid-btn add"><ion-icon
+                    name="enter"></ion-icon></button>
      </form>
 
      <!--summary-->
@@ -54,10 +55,10 @@
                     <td><span id="total_inventory">0</span></td>
                     <td><span id="total_value">₱0.00</span></td>
                     <td><span id="spoilage">0</span></td>
-                    <td><button id="spoilage_button" class="solid-btn spoilage"><ion-icon
+                    <td><button title="Remove spoiled stock." id="spoilage_button" class="solid-btn spoilage"><ion-icon
                                    name="warning"></ion-icon></button></td>
                     <td><span id="restock">0</span></td>
-                    <td><button id="restock_button" class="solid-btn restock"><ion-icon
+                    <td><button title="Restock all items." id="restock_button" class="solid-btn restock"><ion-icon
                                    name="bag-add"></ion-icon></button></td>
                </tr>
           </tbody>
